@@ -28,13 +28,13 @@ public class AgenteManager {
        // Nuevo método de incrementar nivel 
        public void incrementarNivelAgente() {
         if (agentes.isEmpty()) {
-            System.out.println("No hay agentes registrados.");
+            System.out.println("No hay agentes registrados, debes registrar al menos uno.");
             return;
         }
 
         System.out.println("=== Agentes Disponibles ===");
         for (int i = 0; i < agentes.size(); i++) {
-            System.out.println(i + ") " + agentes.get(i));
+            System.out.println(i + " ) " + agentes.get(i));
         }
 
         int indice = ConsoleUtils.leerEntero("Seleccione el número del agente a incrementar nivel: ");
@@ -53,7 +53,7 @@ public class AgenteManager {
 
     public void mostrarAgentes() {
         if (agentes.isEmpty()) {
-            System.out.println("No hay agentes registrados.");
+            System.out.println("No hay agentes registrados. Por favor registre uno");
             return;
         }
         System.out.println("=== Lista de Agentes ===");
@@ -68,7 +68,7 @@ public class AgenteManager {
             System.out.println("\n=== Menú Agentes ===");
             System.out.println("1. Registrar Agente");
             System.out.println("2. Mostrar Agentes");
-            System.out.println("3. Incrementar Nivel Agente");
+            System.out.println("3. Incrementar Nivel del Agente");
             System.out.println("4. Salir");
             int opcion = ConsoleUtils.leerEntero("Seleccione una opción: ");
             ConsoleUtils.limpiarBuffer(); // Consumir cualquier salto de línea residual
