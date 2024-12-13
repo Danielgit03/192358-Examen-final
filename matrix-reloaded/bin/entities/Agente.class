@@ -1,0 +1,33 @@
+// Source code is decompiled from a .class file using FernFlower decompiler.
+package entities;
+
+public class Agente extends Entidad {
+   private String habilidadEspecial;
+   private String misionAsignada;
+
+   public Agente(int id, String nombre, String habilidadEspecial) {
+      super(id, nombre);
+      this.habilidadEspecial = habilidadEspecial;
+   }
+
+   public String getHabilidadEspecial() {
+      return this.habilidadEspecial;
+   }
+
+   public void setHabilidadEspecial(String habilidadEspecial) {
+      this.habilidadEspecial = habilidadEspecial;
+   }
+
+   public String getMisionAsignada() {
+      return this.misionAsignada;
+   }
+
+   public void asignarMision(String mision) {
+      this.misionAsignada = mision;
+   }
+
+   public String toString() {
+      String var10000 = super.toString();
+      return var10000 + ", Habilidad Especial: " + this.habilidadEspecial + (this.misionAsignada != null ? ", Misi\u00f3n: " + this.misionAsignada : "");
+   }
+}
